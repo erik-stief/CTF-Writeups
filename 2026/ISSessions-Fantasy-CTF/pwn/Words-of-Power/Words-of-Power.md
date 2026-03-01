@@ -48,6 +48,7 @@ So I started my first attempt a buffer overflow by connecting to the server and 
 ![The seal getting bricked after attempting to overflow string](bricked-seal.png)
 
 After my manual attempt failed I decided that a script would do a better job overflowing `gets`. Since this is a pwning challenge I decided to use a python script with the pwntools library. I once again attempted padding the array with A (0x61), but realized after it failed that the `strcmp` was reading A as part of the string. This realization is what allowed me to solve the challenge, I instead padded the string with with null bytes as seen in my script here.
+
 **script.py**
 ```
 from pwn import *
