@@ -15,6 +15,7 @@ Examine the provided tiny_elf executable to find the hidden flag.
 After downloading the executable I attempted to run it, resulting in nothing happening. I then decided to open the executable in Ghidra, which decompiled into assembly allowing me to analyze what the program is doing. With my first analysis I noticed a main function that called two sub functions.
 
 Main was relatively easy to understand, it started with a jump if zero and jump if not zero to the first sub function, then it would set the AL register as a memory location and call the second sub function. After the initial MOV the function would repeatedly SUB from AL and CALL the second sub function and end with a CALL to the first sub function.
+
 **Main**
 ```
 JZ FUN_004001ee
@@ -32,6 +33,7 @@ CALL FUN_004001ee
 ```
 
 Sub-Function 1 required me to do a bit of research before completely understanding what it was doing as I am not super familiar with `x86_64 Linux`. Through my research into this code I found that this is an exit sequence, it sets RDI to 0 for a successful status code and RAX to 60 to initiate the `sys_exit`. At this point I already had a good idea as to why the program was not running correctly.
+
 **Sub-Function 1 (FUN_004001ee)**
 ```
 MOV RDI, 0x0
@@ -40,6 +42,7 @@ SYSCALL
 ```
 
 Sub-Function 2 was easier to read as I have come across XOR encryption before. I just needed to understand what the `SYSCALL` was doing. After a bit of research I came to the understanding that the function was printing a single character to `stdout` using `sys_write`.
+
 **Sub-Function 2 (FUN_004001cb)**
 ```
 XOR AL, 0xaf
