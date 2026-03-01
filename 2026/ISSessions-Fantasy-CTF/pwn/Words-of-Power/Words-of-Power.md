@@ -2,7 +2,7 @@
 
 ## Challenge Details
 - **Event:** ISSessions Fantasy CTF
-- **Category:** pwn
+- **Category:** Pwn
 - **Author:** 3354
 - **Description:** You've just defeated the Dark Wizards terrorizing new adventurers at the entrance to Letstone, and behind their summoning circle, you spot a chest, presumably filled with all sorts of loot. One problem, though. It looks like the chest is sealed with two sigils, each requiring one Word of Power. To make matters worse, it seems that one of the sigils is broken, and you have no way of providing it with a Word at all. Can you make it recognize your Word even without a direct way to provide it? Can you figure it out and get full marks?
 - **Files provided:** `main.c`

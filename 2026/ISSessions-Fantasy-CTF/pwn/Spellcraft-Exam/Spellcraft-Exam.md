@@ -2,7 +2,7 @@
 
 ## Challenge Details
 - **Event:** ISSessions Fantasy CTF
-- **Category:** pwn
+- **Category:** Pwn
 - **Author:** 3354
 - **Description:** It's exam week at the Academy, and you're checking in for your spellcrafting final.
 
