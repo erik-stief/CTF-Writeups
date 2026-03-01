@@ -4,15 +4,7 @@
 - **Event:** ISSessions Fantasy CTF
 - **Category:** pwn
 - **Author:** 3354
-- **Description:** You've just defeated the Dark Wizards terrorizing new adventurers at the entrance to Letstone, and behind their summoning circle, you spot a chest, presumably filled with all sorts of loot.
-
-One problem, though. It looks like the chest is sealed with two sigils, each requiring one Word of Power.
-
-To make matters worse, it seems that one of the sigils is broken, and you have no way of providing it with a Word at all.
-
-Can you make it recognize your Word even without a direct way to provide it?
-
-Can you figure it out and get full marks?
+- **Description:** You've just defeated the Dark Wizards terrorizing new adventurers at the entrance to Letstone, and behind their summoning circle, you spot a chest, presumably filled with all sorts of loot. One problem, though. It looks like the chest is sealed with two sigils, each requiring one Word of Power. To make matters worse, it seems that one of the sigils is broken, and you have no way of providing it with a Word at all. Can you make it recognize your Word even without a direct way to provide it? Can you figure it out and get full marks?
 - **Files provided:** `main.c`
 -**Server provided:** `nc 0.cloud.chals.io 10629`
 
@@ -52,6 +44,7 @@ With this newfound knowledge I started thinking about ways I could exploit the b
 
 ## Solution
 So I started my first attempt a buffer overflow by connecting to the server and filling the first array character with the first word and then characters to fill the buffer and allow us to enter the second words memory location. Unfortunately it was not this easy and I was still denied by the seal.
+
 ![The seal getting bricked after attempting to overflow string](bricked-seal.png)
 
 After my manual attempt failed I decided that a script would do a better job overflowing `gets`. Since this is a pwning challenge I decided to use a python script with the pwntools library. I once again attempted padding the array with A (0x61), but realized after it failed that the `strcmp` was reading A as part of the string. This realization is what allowed me to solve the challenge, I instead padded the string with with null bytes as seen in my script here.
