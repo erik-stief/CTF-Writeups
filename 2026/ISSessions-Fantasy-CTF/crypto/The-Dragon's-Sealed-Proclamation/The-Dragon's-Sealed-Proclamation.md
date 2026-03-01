@@ -4,7 +4,7 @@
 - **Event:** ISSessions Fantasy CTF
 - **Category:** Crypto
 - **Author:** UNKNOWN
-- **Description:**A goblin courier was captured carrying an encrypted message between enemy camps. The goblins are known to use a simple keyword cipher — and rumour has it the key is the name of their warlord. Decrypt the message to uncover their plans. Hint: The cipher shifts each letter by the corresponding letter of a repeating keyword.
+- **Description:**The Dragon-King sealed his royal proclamation with an RSA cipher, trusting his court wizard to generate secure keys. But the wizard, in his laziness, used a deterministic and predictable method to choose his primes. The public parameters and ciphertext are provided. Break the seal.
 - **Files provided:** `params.txt`, `encrypt.py`
 
 ## Objective
