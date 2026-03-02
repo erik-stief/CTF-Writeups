@@ -4,8 +4,7 @@
 - **Event:** ISSessions Fantasy CTF
 - **Category:** Reverse Engineering
 - **Author:** 3354
-- **Description:** On your travels, you come across (perhaps) the tiniest elf you've ever met!
-What secrets can it tell you?
+- **Description:** On your travels, you come across (perhaps) the tiniest elf you've ever met! What secrets can it tell you?
 - **Files provided:** `tiny_elf`
 
 ## Objective

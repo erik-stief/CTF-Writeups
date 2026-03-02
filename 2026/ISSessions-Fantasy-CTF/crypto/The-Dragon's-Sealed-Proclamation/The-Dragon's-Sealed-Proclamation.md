@@ -3,7 +3,7 @@
 ## Challenge Details
 - **Event:** ISSessions Fantasy CTF
 - **Category:** Crypto
-- **Author:** UNKNOWN
+- **Author:** Chron0
 - **Description:**The Dragon-King sealed his royal proclamation with an RSA cipher, trusting his court wizard to generate secure keys. But the wizard, in his laziness, used a deterministic and predictable method to choose his primes. The public parameters and ciphertext are provided. Break the seal.
 - **Files provided:** `params.txt`, `encrypt.py`
 
