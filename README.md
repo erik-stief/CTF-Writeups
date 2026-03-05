@@ -17,7 +17,7 @@ Writeups are organized by year, then by event name, and finally by challenge cat
 │   │   │   ├── challenge/
 │   │   │   │   ├── challenge.md (Writeup)
 │   │   │   │   ├── script.py (if exists)
-│   │   │   │   └── tiny_elf (challenge files)
+│   │   │   │   └── challenge.exe (challenge files)
 │   │   ├── Pwn/
 │   │   └── Crypto/
 │   └── Event_Name_2/
