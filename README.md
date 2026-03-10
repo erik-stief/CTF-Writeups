@@ -10,7 +10,7 @@ I am a Cyber Security Honours student at Sheridan College with a strong interest
 
 Writeups are organized by year, then by event name, and finally by challenge category. 
 
-```text
+```
 ├── 2026/
 │   ├── Event_Name_1/
 │   │   ├── Rev/
@@ -22,3 +22,4 @@ Writeups are organized by year, then by event name, and finally by challenge cat
 │   │   └── Crypto/
 │   └── Event_Name_2/
 └── README.md
+```
